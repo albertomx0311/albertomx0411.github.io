@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Usuario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <div class="container is-fluid mb-6">
+        <h1 class="title">Nuevo Usuario</h1>
+    </div>
+    <div class="container pb-6 pt-6">
+        <form action="usuario_guardar.php" method="POST" class="FormularioAjax" autocomplete="off">
+            <div class="columns">
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Nombres</label>
+                        <div class="control">
+                            <input class="input" type="text" name="nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}" maxlength="40" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Apellidos</label>
+                        <div class="control">
+                            <input class="input" type="text" name="apellido" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}" maxlength="40" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Usuario</label>
+                        <div class="control">
+                            <input class="input" type="text" name="usuario" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" name="email" maxlength="70">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Clave</label>
+                        <div class="control">
+                            <input class="input" type="password" name="clave_1" pattern="[a-zA-Z0-9$@.-]{8,100}" maxlength="100" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Repetir Clave</label>
+                        <div class="control">
+                            <input class="input" type="password" name="clave_2" pattern="[a-zA-Z0-9$@.-]{8,100}" maxlength="100" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="has-text-centered">
+                <button type="submit" class="button is-info is-rounded">Guardar</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

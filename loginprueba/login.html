@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+        }
+
+        .main-container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-container > .login,
+        .main-container > .hero-body {
+            height: auto;
+            width: 100%;
+            max-width: 400px;
+            min-width: 300px;
+        }
+
+        .form-inline {
+            display: inline-flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="login">
+            <h2 class="title is-2">Iniciar Sesión</h2>
+            <form action="login.php" method="post">
+                <div class="field">
+                    <label class="label">Correo electrónico:</label>
+                    <div class="control">
+                        <input class="input" type="email" name="email" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Contraseña:</label>
+                    <div class="control">
+                        <input class="input" type="password" name="password" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-primary" type="submit">Iniciar Sesión</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
